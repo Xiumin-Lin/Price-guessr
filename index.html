@@ -1,63 +1,40 @@
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style/index.css" />
+    
+    
     <title>Price Guessr</title>
 </head>
 <body>
     <h1>Price Guessr</h1>
 
-    <button id="send" onclick="play()">Play</button>
+    <button id="play" onclick="play()">Play</button>
 
-    <pre id="res"></pre> <!--TODO-->
+    <pre id="res"></pre> <!--TODO TEST -->
+    <pre id="res2"></pre> <!--TODO TEST -->
 
     <div id="box" hidden>
         <div id="product">
             <h2 id="name">Product Name</h2>
-            <img id="img" src="" alt="Product image"/>
+            <img id="img" src="" alt="img"/>
         </div>
         <div id="guess">
-            <label for="price">Price ?</label>
-            <input id="price" type="number" step="0.01">
+            <label for="user_price">Price ?</label>
+            <input id="user_price" type="number" step="0.01">
             <button onclick="guess()">OK</button>
         </div>
     </div>
-    <p id="result"></p>
+
+    <p id="answer"></p>
+
+    <div id="Session Info">
+        <p>Total Score : <span id="final_score">0</span></p>
+        <p>Number of game : <span id="nbGame">0</span></p>
+    </div>
     
-    <script>
-        const box = document.getElementById("box");
-        const productName = document.getElementById("name");
-        const productImg = document.getElementById("img");
-        const correctPrice = 0;
-
-        function play(){
-            box.hidden = false
-            console.log("play");
-            //fetch
-            // var token = "";
-            // var url = "";
-        
-            // fetch(`${url}?apikey=${token}&t=batman`)
-            // .then(function(res){
-            //     return res.json();
-            // })
-            // .then(function(data){
-            //     document.getElementById("res").innerText = JSON.stringify(data, null, 4);
-            //     console.log(data);
-            // })
-        }
-
-        function guess(){
-            let price = document.getElementById("price");
-            let result = document.getElementById("result");
-            if(price.value == correctPrice)
-                result.innerText = `Good`;
-            else
-                result.innerText = `Incorrect`;
-        }
-    </script>
+    <script type="text/javascript" src="./main.js"></script>
 </body>
 </html>
