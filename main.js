@@ -94,6 +94,7 @@ function guess(){
             user_attempt++;
             break;
     }
+
     attempsLeft = getAttemptsLeft();
     attempts.innerText = `You have ${attempsLeft} attempts left`;
     if(user_attempt === max_attempt || isCorrect){
@@ -102,7 +103,7 @@ function guess(){
         nbGame.innerText = parseInt(nbGame.innerText) + 1;
         final_score.innerText = parseInt(final_score.innerText) + score;
         user_attempt = 0;
-        attempts.innerText = `You have ${max_attempt} attempts left`;
+        attempts.innerText = '';
         play();
     }
     user_price.value = "";
