@@ -1,54 +1,105 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="style/index.css" />
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    
-    
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
     <title>Price Guessr</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="bg-gradient-to-r from-green-300 to-blue-200">
-        <div class="w-3/4 m-auto py-16 min-h-screen flex items-center justify-center">
-            <div class="bg-white shadow overflow-hidden sm:rounded-lg pb-8 px-8">
-                <div class="border-t border-gray-200 text-center pt-8 space-y-8">
-                    <h1 class="text-8xl font-bold text-blue-400">Price Guessr</h1>
+      <div
+        class="w-3/4 m-auto py-16 min-h-screen flex items-center justify-center"
+      >
+        <div class="bg-white shadow overflow-hidden sm:rounded-lg pb-8 px-8">
+          <div class="border-t border-gray-200 text-center pt-8 space-y-8">
+            <h1 class="text-8xl font-bold text-blue-400">Price Guessr</h1>
 
-                    <button class="bg-gradient-to-r from-purple-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 text-white font-semibold px-6 py-3 rounded-md mr-6" id="play" onclick="play()">Play</button>
+            <button
+              class="
+                bg-gradient-to-r
+                from-purple-400
+                to-blue-500
+                hover:from-pink-500 hover:to-orange-500
+                text-white
+                font-semibold
+                px-6
+                py-3
+                rounded-md
+                mr-6
+              "
+              id="play"
+              onclick="play()"
+            >
+              Play
+            </button>
 
-                    <pre id="res"></pre> <!--TODO TEST -->
-                    <pre id="res2"></pre> <!--TODO TEST -->
+            <pre id="res"></pre>
+            <pre id="res2"></pre>
 
-                    <div id="box" class="border-grey-200 space-y-8" hidden>
-                        <div class="flex flex-col items-center space-y-8" id="product">
-                            <h2 class="text-2xl pb-8 px-12 font-medium text-red-400" id="name">Product Name</h2>
-                            <img id="img" src="" alt="img"/>
-                        </div>
-                        <div class="space-x-4" id="guess">
-                            <form id="guess">
-                                <label class="text-2xl font-medium" for="user_price">How much is it ? (Round)</label>
-                                <input class="px-6 py-3 border-2 rounded-md border-blue-300" id="user_price" type="number" min="0" step="1">
-                                <input type="submit" class="bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-500 text-white font-semibold px-6 py-3 rounded-md" value="OK">
-                            </form>
-                        </div>
-                    </div>
-
-                    <p class="text-lg text-blue-600 font-medium" id="answer"></p>
-
-                    <p class="text-lg text-blue-600 font-medium" id="attempts"></p>
-                    
-
-                    <div id="Session Info">
-                        <p class="text-2xl pb-8 px-12 font-medium">Total Score : <span id="final_score">0</span></p>
-                        <p class="text-2xl pb-8 px-12 font-medium">Number of game : <span id="nbGame">0</span></p>
-                    </div>
-                </div>
+            <div id="box" class="border-grey-200 space-y-8" hidden>
+              <div class="flex flex-col items-center" id="product">
+                <h2
+                  class="text-2xl pb-8 px-12 font-medium text-red-400"
+                  id="name"
+                >
+                  Product Name
+                </h2>
+                <img id="img" class="h-32" src="" alt="img" />
+              </div>
+              <div class="space-x-4" id="guess">
+                <form id="guess">
+                  <label class="text-2xl font-medium" for="user_price"
+                    >How much is it ? (Round)</label
+                  >
+                  <input
+                    class="px-6 py-3 border-2 rounded-md border-blue-300"
+                    id="user_price"
+                    type="number"
+                    min="0"
+                    step="1"
+                  />
+                  <input
+                    type="submit"
+                    class="
+                      bg-gradient-to-r
+                      from-green-400
+                      to-green-500
+                      hover:from-green-500 hover:to-green-500
+                      text-white
+                      font-semibold
+                      px-6
+                      py-3
+                      rounded-md
+                    "
+                    value="OK"
+                  />
+                </form>
+              </div>
             </div>
+
+            <p class="text-lg text-blue-600 font-medium" id="answer"></p>
+
+            <p class="text-lg text-blue-600 font-medium" id="attempts"></p>
+
+            <div id="Session Info">
+              <p class="text-2xl px-12 font-medium">
+                Total Score : <span id="final_score">0</span>
+              </p>
+              <p class="text-2xl px-12 font-medium">
+                Number of game : <span id="nbGame">0</span>
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-    
+
     <script type="text/javascript" src="./main.js"></script>
-</body>
+  </body>
 </html>
